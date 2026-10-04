@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake — نوکیا</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23b6c79a'/%3E%3Cpath d='M3 3h3v3h3v3h3v3h1v1h-4v-3H6V7H3z' fill='%2325301c'/%3E%3Crect x='11' y='3' width='2' height='2' fill='%2325301c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="stage">
+    <h1 class="stage__title">SNAKE<span>1997</span></h1>
+
+    <div class="phone">
+      <div class="phone__brand">
+        <span class="phone__logo">NOKIA</span>
+        <span class="phone__model">3310</span>
+      </div>
+
+      <div class="phone__bezel">
+        <canvas id="lcd" width="256" height="288" aria-label="صفحه بازی"></canvas>
+        <div class="phone__glass" aria-hidden="true"></div>
+      </div>
+
+      <div class="keypad" id="keypad">
+        <button class="key" type="button" data-key="1"><b>1</b><i>.</i></button>
+        <button class="key" type="button" data-key="2"><b>2</b><i>abc</i><u class="arrow arrow--up">▲</u></button>
+        <button class="key" type="button" data-key="3"><b>3</b><i>def</i></button>
+        <button class="key" type="button" data-key="4"><b>4</b><i>ghi</i><u class="arrow arrow--left">◀</u></button>
+        <button class="key key--start" type="button" data-key="5"><b>5</b><i>jkl</i></button>
+        <button class="key" type="button" data-key="6"><b>6</b><i>mno</i><u class="arrow arrow--right">▶</u></button>
+        <button class="key" type="button" data-key="7"><b>7</b><i>pqrs</i></button>
+        <button class="key" type="button" data-key="8"><b>8</b><i>tuv</i><u class="arrow arrow--down">▼</u></button>
+        <button class="key" type="button" data-key="9"><b>9</b><i>wxyz</i></button>
+        <button class="key" type="button" data-key="*"><b>*</b><i>+</i></button>
+        <button class="key" type="button" data-key="0"><b>0</b><i>␣</i></button>
+        <button class="key" type="button" data-key="#"><b>#</b><i>⇧</i></button>
+      </div>
+
+      <div class="phone__actions">
+        <button class="call" type="button" id="btn-start" aria-label="شروع / مکث">
+          <span class="call__icon">▲</span>
+          <span class="call__label">START</span>
+        </button>
+        <button class="end" type="button" id="btn-reset" aria-label="پایان و شروع دوباره">
+          <span class="end__icon">✕</span>
+          <span class="end__label">CLEAR</span>
+        </button>
+      </div>
+    </div>
+
+    <section class="panel">
+      <div class="panel__row">
+        <button class="chip" type="button" id="btn-sound" aria-pressed="true">صدا: روشن</button>
+        <button class="chip" type="button" id="btn-touch">لمسی: روشن</button>
+      </div>
+      <p class="panel__hint">
+        کلیدهای <b>۲</b> بالا، <b>۴</b> چپ، <b>۶</b> راست، <b>۸</b> پایین و <b>۵</b> شروع/مکث.
+      <p class="panel__hi">بهترین امتیاز: <b id="hi-label">0</b></p>
+    </section>
+  </main>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
